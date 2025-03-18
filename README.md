@@ -31,7 +31,7 @@ A simple and efficient Task Manager App built with React that allows users to ma
 ## 📥 Installation  
 Clone the repository and start the app:  
 ```sh
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/piyushs131/LimeTray-Project.git
 cd task-manager
 npm install
 npm start
