@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* Import Component-Specific CSS Files */
+  @import './components/TaskForm.css';
+  @import './components/TaskList.css';
+  @import './components/TaskItem.css';
+  @import './components/TaskFilter.css';
+  @import './components/ThemeToggle.css';
+/* Global /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+    overflow-x: hidden; 
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  .dark-mode {
+    background-color: #333;
+    color: white;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .dark-mode .app-container {
+    background-color: #222;
   }
-}
+  
+  .dark-mode .app-header {
+    background-color: #444;
+  }
+  
+  .dark-mode .nav-button {
+    background-color:  #007bff;
+  }
+  
+  .dark-mode .filter-buttons {
+    background-color: lightseagreen;
+    color: white;
+  }
+  
+  .dark-mode .task-item {
+    background-color: #444;
+    color: white;
+  }
+  
+  .dark-mode .task-item.completed {
+    background-color: #2e8b57;
+  }
+  
+  .dark-mode .task-item .task-actions button {
+    background-color: #e74c3c;
+  }
+  
+  /* Light Mode Styling */
+  .light-mode {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .light-mode .app-container {
+    background-color: #f4f4f4;
+  }
+  
+  .light-mode .app-header {
+    background-color: #ececec;
+  }
+  
+  .light-mode .nav-button {
+    background-color: #007bff;
+  }
+  
+  .light-mode .filter-buttons {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .light-mode .task-item {
+    background-color: #eaf2f8;
+  }
+  
+  .light-mode .task-item.completed {
+    background-color: #28a745;
+  }
+  
+  .light-mode .task-item .task-actions button {
+    background-color: #ff6f61;
+  }
+  
+  h1, h2 {
+    font-size: 2rem;
+    color: #e74c3c; 
+  }
+  
+  .nav-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .nav-button:hover {
+    background-color: #45a049;
+  }
+  
+  .task-submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .task-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-item.completed {
+    background-color: #e2f7e1;
+  }
+  
+  .task-text-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-checkbox {
+    margin-right: 10px;
+  }
+  
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .task-action-btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .task-action-btn:hover {
+    background-color: #d90000;
+  }
+  
+  .app-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow-y: auto; 
+  }
+  
+  .task-manager {
+    margin-top: 20px;
+  }
+  
+  /* Task Filter Button */
+  .filter-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #888;
+  }

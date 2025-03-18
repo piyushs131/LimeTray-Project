@@ -1,0 +1,107 @@
+.task-filter-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .task-filter-title {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .task-filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .task-filter-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 120px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-filter-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-filter-btn:active {
+    transform: scale(1);
+  }
+  
+  .task-filter-btn.active {
+    background-color: #28a745;
+  }
+  
+  .task-filter-btn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dark Mode Support */
+  .dark-mode .task-filter-container {
+    background-color: #444;
+    color: white;
+  }
+  
+  .dark-mode .task-filter-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .dark-mode .task-filter-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  .dark-mode .task-filter-btn.active {
+    background-color: #218838;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .task-filter-container {
+      padding: 20px;
+    }
+  
+    .task-filter-btn {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  
+    .task-filter-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  
